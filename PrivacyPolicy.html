@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redesign Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #ff6b6b;
+        }
+        .search-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #searchBar {
+            width: 50%;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+        }
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .game-link {
+            background-color: #2a2a2a;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .game-link:hover {
+            transform: translateY(-5px);
+            background-color: #3a3a3a;
+        }
+        a {
+            color: #4ecdc4;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            display: block;
+        }
+       footer a {
+    display: inline;
+    margin-right: 10px; /* Adjust as needed */
+}
+    </style>
+    <script>
+    function searchGames() {
+        var input, filter, games, i, txtValue;
+        input = document.getElementById('searchBar');
+        filter = input.value.toUpperCase();
+        games = document.getElementsByClassName('game-link');
+
+        for (i = 0; i < games.length; i++) {
+            txtValue = games[i].textContent || games[i].innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                games[i].style.display = "";
+            } else {
+                games[i].style.display = "none";
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <h1>PRIVATE POLICY
+By playing on this site you accept the Private Policy, your allowing google to collect AD info about you and use it to customise your ad experance (idk what to put here😭)</h1>
+    </div>    
+                 <center> <footer>
+            <a href="https://nintendoboi22.github.io/licence-stuff/contact">Contact</a>
+            <a href="https://nintendoboi22.github.io/licence-stuff/PrivatePolicy">Privacy Policy</a>
+            <a href="https://discord.gg/KAxqmAjTsm">Join the Discord</a>
+            <a href="https://nintendoboi22.github.io/licence-stuff/dmca">DMCA</a>
+                   <h4>&copy; 2024 Nintendoboi222. Some rights reserved.</h4></center>
+                </footer>
+</body>
+</html>
